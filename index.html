@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ANALYST REGISTRY</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="terminal-container">
+    <div class="terminal-header">
+      <span class="dot red"></span>
+      <span class="dot yellow"></span>
+      <span class="dot green"></span>
+      <span class="title">root@siem:~# analyst_registry.py</span>
+    </div>
+    <div class="terminal-body">
+      <div class="header-text">
+        <h1>=== BASE DE DADOS: ANALISTAS DE SEGURANÇA ===</h1>
+        <p class="instructions">Sistema de importação e consulta de aliases de segurança.</p>
+      </div>
+      
+      <div class="log-area">
+        <div class="log-line">> Iniciando importação de dados...</div>
+        <div class="log-line">> Carregando lista de analistas_seguranca...</div>
+        <div class="log-line success">> Total de registros importados: <span id="total-count">0</span></div>
+        <div class="log-line">> Executando consulta: posicao_desejada = 16</div>
+        <div class="log-line">> Calculando índice: 16 - 1 = 15</div>
+        <div class="log-line highlight">> O nome número 16 na base de dados é: <span id="result-name">...</span></div>
+      </div>
+
+      <div class="table-container">
+        <table id="analyst-table">
+          <thead>
+            <tr>
+              <th>Índice</th>
+              <th>Posição</th>
+              <th>Alias de Segurança</th>
+            </tr>
+          </thead>
+          <tbody id="analyst-tbody">
+            <!-- Preenchido via JS -->
+          </tbody>
+        </table>
+      </div>
+
+      <div class="footer-info">
+        <span class="prompt-symbol">$</span> <span>Consulta concluída com sucesso.</span>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
